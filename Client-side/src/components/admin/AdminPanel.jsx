@@ -1,0 +1,72 @@
+import { useEffect, useState } from "react";
+
+const AdminPanel = () => {
+  const [contacts, setContacts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchContacts = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/contact");
+        if (!response.ok) {
+          throw new Error("Failed to fetch contacts");
+        }
+        const data = await response.json();
+        setContacts(data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchContacts();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="text-center mt-10">
+        <span className="loading loading-infinity  w-40"></span>
+      </div>
+    );
+  }
+
+  if (error) {
+    return <div className="text-center mt-10 text-red-500">Error: {error}</div>;
+  }
+
+  return (
+    <div className="p-5">
+      <h1 className="text-3xl font-bold text-center mb-5">Admin Panel</h1>
+      <div className="overflow-x-auto">
+        <table className="table-auto w-full border-collapse border border-gray-300">
+          <thead>
+            <tr className="bg-violet-700 text-white">
+              <th className="border border-gray-300 px-4 py-2">Name</th>
+              <th className="border border-gray-300 px-4 py-2">Email</th>
+              <th className="border border-gray-300 px-4 py-2">Message</th>
+            </tr>
+          </thead>
+          <tbody>
+            {contacts.map((contact) => (
+              <tr key={contact._id} className="hover:bg-indigo-500 text-white">
+                <td className="border border-gray-300 px-4 py-2">
+                  {contact.name}
+                </td>
+                <td className="border border-gray-300 px-4 py-2">
+                  {contact.email}
+                </td>
+                <td className="border border-gray-300 px-4 py-2">
+                  {contact.message}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
+
+export default AdminPanel;
