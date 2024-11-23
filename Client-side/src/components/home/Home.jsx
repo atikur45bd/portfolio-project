@@ -11,14 +11,14 @@ import { TbBrandLeetcode } from "react-icons/tb";
 import { NavLink } from "react-router-dom";
 const Home = () => {
   return (
-    <div className="px-28 pt-16 ">
-      <div className="flex items-center gap-28 ">
+    <div className=" px-5 lg:px-28 lg:pt-16 ">
+      <div className="lg:flex items-center lg:gap-28 ">
         <div className="text-center">
-          <h1 className="text-5xl  font-bold pb-5">
+          <h1 className="text-3xl lg:text-5xl  font-bold pb-5">
             Hi am <span className="text-primary ">Md Atikur Rahman</span>
           </h1>
-          <div className="leading-8">
-            <h2 className="text-2xl">
+          <div className="leading-5 lg:leading-8">
+            <h2 className="lg:text-2xl">
               Cloud & Software Architecture Enthusiast
             </h2>
             <h2>BSc CSE (Ongoing)</h2>
@@ -71,9 +71,9 @@ const Home = () => {
             </a>
           </div>
         </div>
-        <div>
+        <div className="flex justify-center pt-5 lg:pt-0">
           <div className="avatar">
-            <div className="ring-primary ring-offset-base-100 w-80 rounded-full ring ring-offset-2">
+            <div className="ring-primary ring-offset-base-100 w-48 lg:w-80 rounded-full ring ring-offset-2 ">
               <img src={profile} />
             </div>
           </div>
