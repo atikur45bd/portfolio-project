@@ -8,11 +8,17 @@ import Project from "./components/project/Project";
 import Contact from "./components/contact/Contact";
 import Blogs from "./components/Blogs/Blogs";
 import AdminPanel from "./components/admin/AdminPanel";
+import Home from "./components/home/Home";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
     children:[
+      {
+        path: '/',
+        element: <Home></Home>
+
+      },
       {
         path: '/about',
         element: <About></About>

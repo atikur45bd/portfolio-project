@@ -3,7 +3,7 @@ import Header from "../header/Header";
 
 const Root = () => {
     return (
-        <div>
+        <div data-theme="synthwave" className="min-h-dvh font-roboto ">
             <Header></Header>
             <Outlet></Outlet>
         </div>

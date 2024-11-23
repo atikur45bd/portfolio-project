@@ -88,7 +88,7 @@ const Contact = () => {
           <div>
             <button
               type="submit"
-              className={`btn btn-secondary mt-5 ${isSubmitting ? "btn-disabled" : ""}`}
+              className={`btn bg-primary mt-5 ${isSubmitting ? "btn-disabled" : ""}`}
               disabled={isSubmitting}
             >
               {isSubmitting ? "Submitting..." : "Submit Now"}
