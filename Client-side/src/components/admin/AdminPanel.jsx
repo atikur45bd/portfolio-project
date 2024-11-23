@@ -13,7 +13,9 @@ const AdminPanel = () => {
           throw new Error("Failed to fetch contacts");
         }
         const data = await response.json();
-        setContacts(data);
+        // Sort data to show latest messages first (based on MongoDB _id)
+        const sortedData = data.sort((a, b) => (a._id < b._id ? 1 : -1));
+        setContacts(sortedData);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -27,7 +29,7 @@ const AdminPanel = () => {
   if (loading) {
     return (
       <div className="text-center mt-10">
-        <span className="loading loading-infinity  w-40"></span>
+        <span className="loading loading-infinity w-40"></span>
       </div>
     );
   }
