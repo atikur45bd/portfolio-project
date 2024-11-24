@@ -50,7 +50,7 @@ const Contact = () => {
   };
 
   return (
-    <div>
+    <div className="pt-28">
       <form onSubmit={handleSubmit}>
         <div className=" w-3/4 lg:w-1/2 m-auto">
           <label className="input input-bordered flex items-center gap-5">
