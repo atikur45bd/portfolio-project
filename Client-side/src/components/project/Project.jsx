@@ -7,14 +7,13 @@ import foodZoneRestaurant from "../images/Projects/food-zone-restaurant .png";
 import penguinFashion from "../images/Projects/penguin-fashion.png";
 import { motion } from "framer-motion";
 
-
 const projects = [
   {
     title: "Food Zone Restaurant",
     image: foodZoneRestaurant,
     details: `
       <div class="details-container">
-        <h2 class="text-2xl font-bold mb-4">About Food Zone Restaurant</h2>
+        <h2 class="lg:text-2xl font-bold mb-4">About Food Zone Restaurant</h2>
         <p class="mb-4">
           Food Zone Restaurant is a visually stunning and user-friendly website designed to reflect the charm and excellence of a restaurant business. 
           Built using <strong>HTML</strong>, <strong>CSS</strong>, and <strong>Vanilla JavaScript</strong>, it ensures a seamless browsing experience with smooth interactions and responsive design.
@@ -43,7 +42,7 @@ const projects = [
     image: classPadImage,
     details: `
       <div class="details-container">
-        <h2 class="text-2xl font-bold mb-4">About ClassPad</h2>
+        <h2 class="lg:text-2xl font-bold mb-4">About ClassPad</h2>
         <p class="mb-4">
           ClassPad is an innovative online class management system designed with modern technology to simplify the organization and management of class-related activities. 
           Developed using <strong>React</strong>, <strong>Tailwind CSS</strong>, and <strong>React Router</strong>, it offers a seamless and user-friendly dashboard interface.
@@ -72,7 +71,7 @@ const projects = [
     image: penguinFashion,
     details: `
       <div class="details-container">
-        <h2 class="text-2xl font-bold mb-4">About Penguin Fashion</h2>
+        <h2 class="lg:text-2xl font-bold mb-4">About Penguin Fashion</h2>
         <p class="mb-4">
           Penguin Fashion is a stylish and user-friendly e-commerce web application that showcases a modern approach to fashion retail. 
           It is built using <strong>HTML</strong> and <strong>Tailwind CSS</strong>, offering a clean and responsive design tailored for an excellent user experience.
@@ -101,7 +100,7 @@ const projects = [
     image: pubCampusAideImage,
     details: `
       <div class="details-container">
-        <h2 class="text-2xl font-bold mb-4">About PUB Campus Aide</h2>
+        <h2 class="lg:text-2xl font-bold mb-4">About PUB Campus Aide</h2>
         <p class="mb-4">
           PUB Campus Aide is a dedicated platform designed to enhance the academic experience at Pundra University of Science & Technology (PUB). 
           Developed using <strong>React</strong>, <strong>React Router</strong>, <strong>HTML</strong>, and <strong>Tailwind CSS</strong>, this web application provides essential features to streamline campus life.
@@ -153,11 +152,11 @@ const projects = [
     clientLink: "https://github.com/mdatikur-contact/Biker-Zone",
     serverLink: "#",
   },
-  
+
   {
-  title: "Data Hunter",
-  image: dataHunter,
-  details: `
+    title: "Data Hunter",
+    image: dataHunter,
+    details: `
     <div class="details-container">
       <h2 class="text-2xl font-bold mb-4">About Data Hunter</h2>
       <p class="mb-4">
@@ -177,11 +176,10 @@ const projects = [
       </p>
     </div>
   `,
-  liveLink: "#", // Replace with the live link when available
-  clientLink: "#", // Replace with the GitHub repository link when available
-  serverLink: "#", // Replace with the server link if applicable
-},
-
+    liveLink: "#", // Replace with the live link when available
+    clientLink: "#", // Replace with the GitHub repository link when available
+    serverLink: "#", // Replace with the server link if applicable
+  },
 ];
 
 const Project = () => {
@@ -271,16 +269,20 @@ const Project = () => {
 
       {/* Custom Modal */}
       {selectedProject && open && (
-        <motion.div 
-        
-        initial={{ opacity: 0 }} // Start from 0 opacity
-      animate={{ opacity: 1 }} // Fade in to full opacity
-      exit={{ opacity: 0 }} // Fade out when exiting the page
-      transition={{ duration: 1 }}
-        className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-indigo-400 p-6 rounded-lg shadow-lg max-w-3xl w-full">
-            <h2 className="text-3xl font-semibold mb-4">{selectedProject.title}</h2>
-            <div dangerouslySetInnerHTML={{ __html: selectedProject.details }} />
+        <motion.div
+          initial={{ opacity: 0 }} 
+          animate={{ opacity: 1 }} 
+          exit={{ opacity: 0 }} 
+          transition={{ duration: 1 }}
+          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+        >
+          <div className="bg-indigo-400 p-6 rounded-lg shadow-lg  lg:max-w-3xl lg:w-full">
+            <h2 className="lg:text-3xl font-semibold mb-4">
+              {selectedProject.title}
+            </h2>
+            <div
+              dangerouslySetInnerHTML={{ __html: selectedProject.details }}
+            />
             <div className="flex justify-end mt-4">
               <button
                 onClick={handleCloseModal}

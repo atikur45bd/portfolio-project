@@ -54,7 +54,7 @@ const Blogs = () => {
   const reversedPosts = [...posts].reverse();
 
   return (
-    <div className="px-5 lg:px-28 pt-10 lg:pt-36">
+    <div className="px-5 lg:px-28 pt-10 lg:pt-36 pb-5">
       <motion.h1
         className="text-4xl lg:text-5xl font-bold pb-5 text-center text-primary"
         initial={{ opacity: 0, y: -20 }}

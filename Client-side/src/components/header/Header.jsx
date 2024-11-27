@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { MdEmail } from "react-icons/md"; // Importing MdEmail (Envelope) icon
 import atikLogo from "../images/atik-logo.png";
 
 const Header = () => {
@@ -96,15 +97,27 @@ const Header = () => {
               </ul>
             )}
           </div>
-          {/* logo of atikur's */}
+          {/* Logo */}
           <div className="lg:pl-28 ">
-            <img src={atikLogo} alt="" className=" w-14 lg:w-28 " />
+            <img src={atikLogo} alt="Atik Logo" className="w-14 lg:w-28" />
           </div>
         </div>
 
         {/* Navbar Center */}
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-xl font-bold">{links}</ul>
+        </div>
+
+        <div className="navbar-end flex items-center space-x-4">
+          <MdEmail className="text-2xl text-blue-500" /> 
+          
+          
+          <a
+            href="mailto:mdatikur.contact@gmail.com" 
+            className="lg:text-lg font-semibold text-white hover:text-primary"
+          >
+            mdatikur.contact@gmail.com
+          </a>
         </div>
       </div>
     </div>
