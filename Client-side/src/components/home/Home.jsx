@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"; // Import motion from Framer Motion
+import { motion } from "framer-motion"; 
 import profile from "../images/atikur.jpg";
 import resume from "../images/Atikur resume.pdf";
 import { HiOutlineDownload } from "react-icons/hi";
@@ -9,6 +9,7 @@ import { NavLink } from "react-router-dom";
 import About from "../about/About";
 import Project from "../project/Project";
 import Contact from "../contact/Contact";
+import Blogs from "../Blogs/Blogs";
 
 const Home = () => {
   return (
@@ -115,6 +116,7 @@ const Home = () => {
       </div>
       <About />
       <Project />
+      <Blogs/>
       <Contact/>
     </motion.div>
   );
