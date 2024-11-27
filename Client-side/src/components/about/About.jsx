@@ -48,7 +48,7 @@ const About = () => {
       },
       { name: "React", icon: <FaReact className="text-cyan-500 text-4xl" /> },
       {
-        name: "React Router",
+        name: "ReactRouter",
         icon: <SiReactrouter className="text-red-500 text-4xl" />,
       },
       {
@@ -129,7 +129,7 @@ const About = () => {
         {Object.entries(skillCategories).map(([category, items], index) => (
           <div key={index}>
             <h3 className="text-2xl font-semibold mb-4">{category}</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-3 md:grid-cols-4 gap-6">
               {items.map((skill, idx) => (
                 <div key={idx} className="flex flex-col items-center">
                   {skill.icon}

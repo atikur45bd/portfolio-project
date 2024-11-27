@@ -71,18 +71,17 @@ const projects = [
     image: penguinFashion,
     details: `
       <div class="details-container">
-        <h2 class="lg:text-2xl font-bold mb-4">About Penguin Fashion</h2>
-        <p class="mb-4">
+        <h2 class="lg:text-2xl font-bold ">About Penguin Fashion</h2>
+        <p class="">
           Penguin Fashion is a stylish and user-friendly e-commerce web application that showcases a modern approach to fashion retail. 
           It is built using <strong>HTML</strong> and <strong>Tailwind CSS</strong>, offering a clean and responsive design tailored for an excellent user experience.
         </p>
-        <p class="mb-4">
+        <p class="">
           Key highlights of the project include:
           <ul class="list-disc ml-5">
             <li>Responsive design for seamless browsing on all devices</li>
             <li>Modern UI with Tailwind CSS for effortless styling</li>
             <li>Attractive layout designed to enhance product presentation</li>
-            <li>Easy navigation for users to explore collections</li>
           </ul>
         </p>
         <p>
@@ -100,12 +99,12 @@ const projects = [
     image: pubCampusAideImage,
     details: `
       <div class="details-container">
-        <h2 class="lg:text-2xl font-bold mb-4">About PUB Campus Aide</h2>
+        <h2 class="lg:text-2xl font-bold ">About PUB Campus Aide</h2>
         <p class="mb-4">
           PUB Campus Aide is a dedicated platform designed to enhance the academic experience at Pundra University of Science & Technology (PUB). 
           Developed using <strong>React</strong>, <strong>React Router</strong>, <strong>HTML</strong>, and <strong>Tailwind CSS</strong>, this web application provides essential features to streamline campus life.
         </p>
-        <p class="mb-4">
+        <p class="">
           Key features include:
           <ul class="list-disc ml-5">
             <li>Real-time class schedules to help students stay organized</li>
@@ -129,13 +128,12 @@ const projects = [
     image: bikeDekho,
     details: `
       <div class="details-container">
-        <h2 class="text-2xl font-bold mb-4">About Biker-Dekho</h2>
+        <h2 class="text-2xl font-bold ">About Biker-Dekho</h2>
         <p class="mb-4">
           Biker-Dekho is a user-friendly website designed for bike enthusiasts, built with <strong>HTML</strong> and <strong>Tailwind CSS</strong>. 
           This platform allows users to explore various bikes, compare specifications, and make informed decisions before making a purchase. 
-          Whether you're a professional biker or someone looking for their first bike, Biker-Dekho provides all the information you need in a well-organized interface.
         </p>
-        <p class="mb-4">
+        <p >
           The website features:
           <ul class="list-disc ml-5">
             <li>Bike model details with high-quality images and specifications</li>
@@ -158,7 +156,7 @@ const projects = [
     image: dataHunter,
     details: `
     <div class="details-container">
-      <h2 class="text-2xl font-bold mb-4">About Data Hunter</h2>
+      <h2 class="lg:text-2xl font-bold ">About Data Hunter</h2>
       <p class="mb-4">
         Data Hunter is a dynamic web application designed to help users search, collect, and analyze data from various sources. Built with <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>, this project offers a user-friendly interface for browsing through datasets, filtering specific data points, and visualizing the results. 
         It's ideal for data enthusiasts, researchers, and anyone who needs to work with large datasets on a daily basis.
@@ -168,7 +166,6 @@ const projects = [
         <ul class="list-disc ml-5">
           <li>Advanced search and filter options for easy data retrieval</li>
           <li>Data visualization through charts and tables for better analysis</li>
-          <li>Responsive design for smooth interaction on both mobile and desktop</li>
         </ul>
       </p>
       <p>
@@ -231,7 +228,7 @@ const Project = () => {
               />
             </div>
 
-            <h3 className="text-2xl text-gray-800 font-semibold mb-4 text-center">
+            <h3 className="text-xl lg:text-2xl text-gray-800 font-semibold mb-4 text-center">
               {project.title}
             </h3>
 
