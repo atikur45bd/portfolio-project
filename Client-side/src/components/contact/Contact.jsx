@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';  // Import the CSS for Toastify
+import 'react-toastify/dist/ReactToastify.css';
+import { motion } from "framer-motion";
+  // Import the CSS for Toastify
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -50,7 +52,20 @@ const Contact = () => {
   };
 
   return (
-    <div className="pt-28">
+    <motion.div 
+    initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: .75, ease: "easeInOut" }}
+    className="pt-28">
+       <motion.h1
+              className="text-4xl lg:text-5xl font-bold pb-5 text-center text-primary"
+              initial={{ opacity: 0, y: -20 }} // Initial position offscreen
+              animate={{ opacity: 1, y: 0 }} // Smooth transition to visible state
+              transition={{ duration: 0.8 }} // Duration of the transition
+            >
+            Contact Us
+            </motion.h1>
       <form onSubmit={handleSubmit}>
         <div className=" w-3/4 lg:w-1/2 m-auto">
           <label className="input input-bordered flex items-center gap-5">
@@ -99,7 +114,7 @@ const Contact = () => {
 
       {/* Toast container for displaying toasts */}
       <ToastContainer />
-    </div>
+    </motion.div>
   );
 };
 
