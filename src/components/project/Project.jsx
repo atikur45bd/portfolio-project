@@ -194,7 +194,7 @@ const Project = () => {
   };
 
   return (
-    <div className="px-5 lg:px-28 pt-10 lg:pt-36 pb-10">
+    <div className=" lg:px-28 pt-10 lg:pt-36 pb-10">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

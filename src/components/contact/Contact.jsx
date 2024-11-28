@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
 
 const Contact = () => {
@@ -36,10 +36,12 @@ const Contact = () => {
       const result = await response.json();
 
       if (response.ok) {
-        notify();  
+        notify();
         setFormData({ name: "", email: "", message: "" });
       } else {
-        toast.error(result.error || "Failed to submit the form. Please try again.");
+        toast.error(
+          result.error || "Failed to submit the form. Please try again."
+        );
       }
     } catch (error) {
       console.error("Error submitting the form:", error);
@@ -50,23 +52,24 @@ const Contact = () => {
   };
 
   return (
-    <motion.div 
-    initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: .75, ease: "easeInOut" }}
-    className="pt-28">
-       <motion.h1
-              className="text-4xl lg:text-5xl font-bold pb-5 text-center text-primary"
-              initial={{ opacity: 0, y: -20 }} 
-              animate={{ opacity: 1, y: 0 }} 
-              transition={{ duration: 0.8 }} 
-            >
-            Contact Us
-            </motion.h1>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.75, ease: "easeInOut" }}
+      className="pt-28"
+    >
+      <motion.h1
+        className="text-4xl lg:text-5xl font-bold pb-5 text-center text-primary"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        Contact Us
+      </motion.h1>
       <form onSubmit={handleSubmit}>
         <div className=" w-3/4 lg:w-1/2 m-auto">
-          <label className="input input-bordered flex items-center gap-5">
+          <label className="input border border-purple-500 flex items-center gap-5">
             Name
             <input
               type="text"
@@ -78,7 +81,7 @@ const Contact = () => {
               required
             />
           </label>
-          <label className="input input-bordered flex items-center gap-2 my-5">
+          <label className="input border border-purple-500 flex items-center gap-2 my-5">
             Email
             <input
               type="email"
@@ -93,7 +96,7 @@ const Contact = () => {
           <textarea
             name="message"
             placeholder="Message"
-            className="textarea textarea-bordered textarea-lg w-full"
+            className="textarea border border-purple-500 textarea-lg w-full"
             value={formData.message}
             onChange={handleChange}
             required
@@ -101,7 +104,9 @@ const Contact = () => {
           <div>
             <button
               type="submit"
-              className={`btn bg-primary mt-5 ${isSubmitting ? "btn-disabled" : ""}`}
+              className={`btn bg-primary mt-5 ${
+                isSubmitting ? "btn-disabled" : ""
+              }`}
               disabled={isSubmitting}
             >
               {isSubmitting ? "Submitting..." : "Submit Now"}
