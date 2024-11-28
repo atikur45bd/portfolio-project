@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 const AdminPanel = () => {
   const [contacts, setContacts] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -18,21 +17,13 @@ const AdminPanel = () => {
         setContacts(sortedData);
       } catch (err) {
         setError(err.message);
-      } finally {
-        setLoading(false);
-      }
+      } 
     };
 
     fetchContacts();
   }, []);
 
-  if (loading) {
-    return (
-      <div className="text-center mt-10">
-        <span className="loading loading-infinity w-40"></span>
-      </div>
-    );
-  }
+  
 
   if (error) {
     return <div className="text-center mt-10 text-red-500">Error: {error}</div>;

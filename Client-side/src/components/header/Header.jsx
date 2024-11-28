@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { MdEmail } from "react-icons/md"; // Importing MdEmail (Envelope) icon
+import { MdEmail } from "react-icons/md"; 
 import atikLogo from "../images/atik-logo.png";
 
 const Header = () => {

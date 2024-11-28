@@ -8,7 +8,7 @@ import EmulatorSimulator from "../images/posts/emulator vs simulator.jpg";
 import DevelopersTools from "../images/posts/developer tools.jpg";
 
 const Blogs = () => {
-  const [isModalOpen, setIsModalOpen] = useState(null); // State to manage modal opening for each post
+  const [isModalOpen, setIsModalOpen] = useState(null); 
 
   const handleOpenModal = (postId) => {
     setIsModalOpen(postId);

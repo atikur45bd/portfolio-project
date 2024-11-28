@@ -10,7 +10,7 @@ const Footer = () => {
               &copy; {currentYear}{" "}
               <span>
                 Designed and Developed by{" "}
-                <br className="block sm:hidden" /> {/* This line controls visibility of the break line */}
+                <br className="block sm:hidden" /> 
                 <a
                   href="https://www.linkedin.com/in/mdatikur-contact/"
                   className="text-blue-400 hover:underline"

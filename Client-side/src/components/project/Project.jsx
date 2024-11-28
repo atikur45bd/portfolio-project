@@ -173,24 +173,24 @@ const projects = [
       </p>
     </div>
   `,
-    liveLink: "#", // Replace with the live link when available
-    clientLink: "#", // Replace with the GitHub repository link when available
-    serverLink: "#", // Replace with the server link if applicable
+    liveLink: "#", 
+    clientLink: "#", 
+    serverLink: "#", 
   },
 ];
 
 const Project = () => {
-  const [open, setOpen] = useState(false); // State to manage modal visibility
+  const [open, setOpen] = useState(false); 
   const [selectedProject, setSelectedProject] = useState(null); // State to store selected project details
 
   const handleOpenModal = (project) => {
     setSelectedProject(project);
-    setOpen(true); // Open the modal
+    setOpen(true); 
   };
 
   const handleCloseModal = () => {
-    setOpen(false); // Close the modal
-    setSelectedProject(null); // Clear the selected project
+    setOpen(false); 
+    setSelectedProject(null); 
   };
 
   return (

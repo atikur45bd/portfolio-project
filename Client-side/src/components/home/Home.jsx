@@ -14,10 +14,10 @@ import Blogs from "../Blogs/Blogs";
 const Home = () => {
   return (
     <motion.div
-      initial={{ opacity: 0 }} // Start from 0 opacity
-      animate={{ opacity: 1 }} // Fade in to full opacity
-      exit={{ opacity: 0 }} // Fade out when exiting the page
-      transition={{ duration: 0.5 }} // Set transition duration for fade-in effect
+      initial={{ opacity: 0 }} 
+      animate={{ opacity: 1 }} 
+      exit={{ opacity: 0 }} 
+      transition={{ duration: 0.5 }} 
       className="pb-5"
     >
       <div className="px-5 lg:px-28 pt-10 lg:pt-36">
@@ -25,9 +25,9 @@ const Home = () => {
           <div className="text-center">
             <motion.h1
               className="text-4xl lg:text-5xl font-bold pb-5"
-              initial={{ opacity: 0, y: -20 }} // Initial position offscreen
-              animate={{ opacity: 1, y: 0 }} // Smooth transition to visible state
-              transition={{ duration: 0.8 }} // Duration of the transition
+              initial={{ opacity: 0, y: -20 }} 
+              animate={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.8 }} 
             >
               Hi, I am
               <br className="block sm:hidden" />

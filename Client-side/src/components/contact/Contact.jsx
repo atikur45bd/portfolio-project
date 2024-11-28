@@ -2,7 +2,6 @@ import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { motion } from "framer-motion";
-  // Import the CSS for Toastify
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -37,8 +36,7 @@ const Contact = () => {
       const result = await response.json();
 
       if (response.ok) {
-        notify();  // Show success toast
-        // Reset form fields after successful submission
+        notify();  
         setFormData({ name: "", email: "", message: "" });
       } else {
         toast.error(result.error || "Failed to submit the form. Please try again.");
@@ -60,9 +58,9 @@ const Contact = () => {
     className="pt-28">
        <motion.h1
               className="text-4xl lg:text-5xl font-bold pb-5 text-center text-primary"
-              initial={{ opacity: 0, y: -20 }} // Initial position offscreen
-              animate={{ opacity: 1, y: 0 }} // Smooth transition to visible state
-              transition={{ duration: 0.8 }} // Duration of the transition
+              initial={{ opacity: 0, y: -20 }} 
+              animate={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.8 }} 
             >
             Contact Us
             </motion.h1>
@@ -112,7 +110,6 @@ const Contact = () => {
         </div>
       </form>
 
-      {/* Toast container for displaying toasts */}
       <ToastContainer />
     </motion.div>
   );

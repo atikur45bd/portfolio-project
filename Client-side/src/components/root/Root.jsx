@@ -39,7 +39,6 @@ const Root = () => {
           />
         </div>
       ) : (
-        // Show main content once loading is finished
         <>
           <Header />
           <Outlet />
