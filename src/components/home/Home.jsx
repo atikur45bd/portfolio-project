@@ -86,16 +86,16 @@ const Home = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.7 }}
             >
-              <a href="https://github.com/mdatikur-contact">
+              <a href="https://github.com/mdatikur-contact " target="_blank">
                 <FaGithub className="border-2 border-gray-700 rounded-full p-1 hover:bg-gray-700" />
               </a>
-              <a href="https://www.linkedin.com/in/mdatikur-contact/">
+              <a href="https://www.linkedin.com/in/mdatikur-contact/" target="_blank">
                 <BiLogoLinkedin className="border-2 border-gray-700 rounded-full p-1 hover:bg-gray-700" />
               </a>
-              <a href="https://leetcode.com/u/atikur45bd/">
+              <a href="https://leetcode.com/u/atikur45bd/" target="_blank">
                 <TbBrandLeetcode className="border-2 border-gray-700 rounded-full p-1 hover:bg-gray-700" />
               </a>
-              <a href="https://x.com/mdAtikurContact">
+              <a href="https://x.com/mdAtikurContact" target="_blank">
                 <FaXTwitter className="border-2 border-gray-700 rounded-full p-1 hover:bg-gray-700" />
               </a>
             </motion.div>
