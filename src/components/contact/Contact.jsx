@@ -60,7 +60,7 @@ const Contact = () => {
       className="pt-28"
     >
       <motion.h1
-        className="text-4xl lg:text-5xl font-bold pb-5 text-center text-primary"
+        className="text-4xl lg:text-5xl font-bold pb-5 text-center text-purple-700"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

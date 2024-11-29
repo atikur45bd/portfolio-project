@@ -64,7 +64,7 @@ const Blogs = () => {
   return (
     <div className="px-5 lg:px-28 pt-10 lg:pt-36 pb-5">
       <motion.h1
-        className="text-4xl lg:text-5xl font-bold pb-5 text-center text-primary"
+        className="text-4xl lg:text-5xl font-bold pb-5 text-center text-purple-700"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -77,12 +77,12 @@ const Blogs = () => {
         {reversedPosts.map((post) => (
           <motion.div
             key={post.id}
-            className="blog-post bg-white text-indigo-500   hover:text-white hover:bg-primary rounded-lg p-5 shadow-md hover:shadow-lg transform transition-all duration-500 hover:scale-105"
+            className="blog-post bg-gray-900 border border-purple-500 text-indigo-500    hover:bg-gray-800 rounded-lg p-5 shadow-md hover:shadow-lg transform transition-all duration-500 hover:scale-105"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 0.5 }}
           >
-            <h3 className="text-xl font-semibold mb-2 text-indigo-600">{post.title}</h3>
+            <h3 className="text-xl font-semibold mb-2 text-purple-600">{post.title}</h3>
             <div className="overflow-hidden rounded-lg mb-3">
               <img
                 src={post.image}

@@ -199,7 +199,7 @@ const Project = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-5xl text-primary font-extrabold text-center mb-8"
+        className="text-5xl text-purple-700 font-extrabold text-center mb-8"
       >
         My Projects
       </motion.h2>
@@ -218,7 +218,7 @@ const Project = () => {
             animate={{ scale: 1 }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="p-6 rounded-lg shadow-lg bg-gray-200 hover:bg-indigo-300"
+            className="p-6 rounded-lg shadow-lg  bg-gray-900 hover:bg-gray-800 text-indigo-500 border  border-purple-500 "
           >
             <div className="flex justify-center">
               <img
@@ -228,34 +228,34 @@ const Project = () => {
               />
             </div>
 
-            <h3 className="text-xl lg:text-2xl text-gray-800 font-semibold mb-4 text-center">
+            <h3 className="text-xl lg:text-2xl text-purple-600 font-semibold mb-4 text-center">
               {project.title}
             </h3>
 
             <div className="flex justify-center gap-4 flex-wrap mt-4">
               <button
                 onClick={() => handleOpenModal(project)}
-                className="text-gray-800 px-6 py-3 border border-primary rounded-full transition hover:bg-primary hover:text-white"
+                className="text-purple-500 px-6 py-3 border border-purple-500 rounded-full transition hover:bg-purple-600 hover:text-white"
               >
                 Details
               </button>
               <a
                 href={project.liveLink}
                 target="_blank"
-                className="text-gray-800 px-6 py-3 border border-primary rounded-full transition hover:bg-primary hover:text-white"
+                className="text-purple-500 px-6 py-3 border border-purple-500 rounded-full transition hover:bg-purple-600 hover:text-white"
               >
                 Live
               </a>
               <a
                 href={project.clientLink}
                 target="_blank"
-                className="text-gray-800 px-6 py-3 border border-primary rounded-full transition hover:bg-primary hover:text-white"
+                className="text-purple-500 px-6 py-3 border border-purple-500 rounded-full transition hover:bg-purple-600 hover:text-white"
               >
                 Client
               </a>
               <a
                 href={project.serverLink}
-                className="text-gray-800 px-6 py-3 border border-primary rounded-full transition hover:bg-primary hover:text-white"
+                className="text-purple-500 px-6 py-3 border border-purple-500 rounded-full transition hover:bg-purple-600 hover:text-white"
               >
                 Server
               </a>

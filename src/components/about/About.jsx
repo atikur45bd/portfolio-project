@@ -344,7 +344,7 @@ const About = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
-        className="text-5xl text-primary font-extrabold text-center mb-8"
+        className="text-5xl text-purple-700 font-extrabold text-center mb-8"
       >
         Meet Atik
       </motion.h2>
