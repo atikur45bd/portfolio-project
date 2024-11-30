@@ -6,7 +6,7 @@ import NextVsNestJS from "../images/posts/Next.js vs. NestJS.jpg";
 import PasswordHashing from "../images/posts/password Hashing.jpg";
 import EmulatorSimulator from "../images/posts/emulator vs simulator.jpg";
 import DevelopersTools from "../images/posts/developer tools.jpg";
-import BestTechnologyStack from "../images/posts/Choosing Best Technology Stack.jpg";
+import BestTechnologyStack from "../images/posts/যেকোনো ওয়েবসাইটের জন্য প্রযুক্তি নির্বাচন করার গাইডলাইন.png";
 
 const Blogs = () => {
   const [isModalOpen, setIsModalOpen] = useState(null); 
@@ -51,7 +51,7 @@ const Blogs = () => {
     },
     {
       id: 5,
-      title: "Choosing Best Technology Stack ",
+      title: "যেকোনো ওয়েবসাইটের জন্য প্রযুক্তি নির্বাচন করার গাইডলাইন ",
       description: "যেকোনো ওয়েবসাইটের জন্য প্রযুক্তি নির্বাচন করার গাইডলাইন....",
       image: BestTechnologyStack,
       iframeSrc: "https://www.linkedin.com/embed/feed/update/urn:li:share:7264454643164880898",
@@ -87,7 +87,7 @@ const Blogs = () => {
               <img
                 src={post.image}
                 alt={post.title}
-                className="w-full h-36 object-cover transition-transform duration-500 transform hover:scale-110"
+                className="w-full  object-cover transition-transform duration-500 transform hover:scale-110"
               />
             </div>
             <p className="text-sm   mb-4">{post.description}</p>
