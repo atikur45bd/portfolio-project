@@ -19,6 +19,7 @@ import {
   SiMongodb,
   SiPostman,
   SiReactrouter,
+  SiDaisyui,
 } from "react-icons/si";
 import { RiNextjsLine } from "react-icons/ri";
 
@@ -40,7 +41,7 @@ const About = () => {
       },
       {
         name: "DaisyUI",
-        icon: <SiTailwindcss className="text-cyan-500 text-4xl" />,
+        icon: <SiDaisyui className="text-purple-600 text-6xl" />,
       },
       {
         name: "JavaScript",
