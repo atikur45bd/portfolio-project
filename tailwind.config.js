@@ -13,7 +13,11 @@ export default {
       },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [
+    require("daisyui"),                // DaisyUI for component themes
+    require("@tailwindcss/line-clamp"), // Line-clamp for text truncation
+    require("@tailwindcss/typography") // Tailwind typography for rich text
+  ],
   daisyui: {
     themes: [
       {

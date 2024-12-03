@@ -18,6 +18,7 @@ const Blogs = () => {
   const handleCloseModal = () => {
     setIsModalOpen(null);
   };
+  
 
   // JavaScript object for blog posts
   const posts = [
@@ -52,7 +53,7 @@ const Blogs = () => {
     {
       id: 5,
       title: "যেকোনো ওয়েবসাইটের জন্য প্রযুক্তি নির্বাচন করার গাইডলাইন ",
-      description: "যেকোনো ওয়েবসাইটের জন্য প্রযুক্তি নির্বাচন করার গাইডলাইন....",
+      description: "একটি ওয়েবসাইট তৈরির জন্য প্রযুক্তি নির্বাচন করার সময় প্রকল্পের চাহিদা, স্কেল, বাজেট, সময়সীমা এবং টিমের দক্ষতা বিবেচনা করা গুরুত্বপূর্ণ। নিচে একটি পূর্ণাঙ্গ গাইড দেওয়া হলো:",
       image: BestTechnologyStack,
       iframeSrc: "https://www.linkedin.com/embed/feed/update/urn:li:share:7264454643164880898",
     },
@@ -77,20 +78,20 @@ const Blogs = () => {
         {reversedPosts.map((post) => (
           <motion.div
             key={post.id}
-            className="blog-post bg-gray-900 border border-purple-500 text-indigo-500    hover:bg-gray-800 rounded-lg p-5 shadow-md hover:shadow-lg transform transition-all duration-500 hover:scale-105"
+            className="blog-post overflow-hidden bg-gray-900 border border-purple-500 text-indigo-500    hover:bg-gray-800 rounded-lg p-5 shadow-md hover:shadow-lg transform transition-all duration-500 hover:scale-105"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 0.5 }}
           >
-            <h3 className="text-xl font-semibold mb-2 text-purple-600">{post.title}</h3>
+            <h3 className="text-xl font-semibold mb-2 overflow-hidden  h-12 text-purple-600">{post.title}</h3>
             <div className="overflow-hidden rounded-lg mb-3">
               <img
                 src={post.image}
                 alt={post.title}
-                className="w-full  object-cover transition-transform duration-500 transform hover:scale-110"
+                className="w-full h-48 object-cover transition-transform duration-500 transform hover:scale-110"
               />
             </div>
-            <p className="text-sm   mb-4">{post.description}</p>
+            <p className=" text-sm  overflow-hidden line-clamp-2 mb-4">{post.description}</p>
             <button
               onClick={() => handleOpenModal(post.id)}
               className=" w-full py-2 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500 text-white hover:from-purple-500 hover:to-indigo-500 transition-all duration-700"
