@@ -7,6 +7,7 @@ import PasswordHashing from "../images/posts/password Hashing.jpg";
 import EmulatorSimulator from "../images/posts/emulator vs simulator.jpg";
 import DevelopersTools from "../images/posts/developer tools.jpg";
 import BestTechnologyStack from "../images/posts/যেকোনো ওয়েবসাইটের জন্য প্রযুক্তি নির্বাচন করার গাইডলাইন.png";
+import smallComponent from "../images/posts/ছোট কম্পোনেন্ট.png";
 
 const Blogs = () => {
   const [isModalOpen, setIsModalOpen] = useState(null); 
@@ -56,6 +57,13 @@ const Blogs = () => {
       description: "একটি ওয়েবসাইট তৈরির জন্য প্রযুক্তি নির্বাচন করার সময় প্রকল্পের চাহিদা, স্কেল, বাজেট, সময়সীমা এবং টিমের দক্ষতা বিবেচনা করা গুরুত্বপূর্ণ। নিচে একটি পূর্ণাঙ্গ গাইড দেওয়া হলো:",
       image: BestTechnologyStack,
       iframeSrc: "https://www.linkedin.com/embed/feed/update/urn:li:share:7264454643164880898",
+    },
+    {
+      id: 6,
+      title: "React অ্যাপ্লিকেশনে ছোট কম্পোনেন্ট কেন ব্যবহার করবেন?",
+      description:"React অ্যাপ্লিকেশনে ছোট কম্পোনেন্ট ব্যবহার করলে রিডিবিলিটি, পারফরম্যান্স এবং মেনটেন্যান্স উল্লেখযোগ্যভাবে উন্নত হয়। ছোট ও মডুলার কম্পোনেন্ট ডিজাইন আপনাকে দ্রুত ডেভেলপমেন্ট এবং স্কেলিংয়ে সাহায্য করে।",
+      image:smallComponent,
+      iframeSrc: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7274693324806983680",
     },
   ];
 
