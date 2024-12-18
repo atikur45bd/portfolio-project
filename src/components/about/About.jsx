@@ -233,12 +233,15 @@ const About = () => {
 
             {/* Diploma */}
             <div className="border border-purple-500 rounded-lg p-4 mt-3 bg-gray-900 shadow-lg">
-              <p className="text-xl font-semibold text-purple-400 ">
+              <p className="text-xl font-semibold text-purple-400">
                 Diploma in Computer Technology
               </p>
               <p className="text-sm text-gray-400">
                 Vocational Teachers' Training Institute (VTTI), Bogura
               </p>
+              <hr className="my-3 border-pink-500" />
+              <p className=" text-gray-100">Year : 2017 - 2021</p>
+              <p className=" text-gray-100">CGPA: 3.70</p>
             </div>
           </div>
         </div>
@@ -350,7 +353,6 @@ const About = () => {
         Meet Atik
       </motion.h2>
       <div className="flex flex-col lg:flex-row  lg:gap-28 items-start ">
-        
         <div className="lg:w-96 h-96 ">
           <DotLottieReact
             src="https://lottie.host/5ce1ceea-ffa2-4f1e-9395-9c8df6b69204/y98708tqjJ.lottie"
